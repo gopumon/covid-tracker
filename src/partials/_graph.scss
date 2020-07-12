@@ -1,0 +1,29 @@
+.tlGraph {
+  background: #fafafa;
+  position: relative;
+
+  .tick {
+    font-size: 0.5rem;
+  }
+
+  .line {
+    fill: none;
+    stroke-width: 0.2rem;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    mix-blend-mode: multiply;
+  }
+
+  .cnf {
+    stroke: $confirmed;
+  }
+  .act {
+    stroke: $active;
+  }
+  .rec {
+    stroke: $recovered;
+  }
+  .det {
+    stroke: $deceased;
+  }
+}

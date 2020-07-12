@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@200;300;600&display=swap");
+
+// Custom Variables
+@import "partials/vars";
+
+// Bulma Variables
+@import "~bulma/sass/utilities/_all.sass";
+
+// Required Bulma Components
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/form/_all.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/button.sass";
+
+// Main Style
+@import "partials/main";
+
+//Styles for Graph
+@import "partials/graph";

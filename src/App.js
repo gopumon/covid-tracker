@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+// Import Icon
+import virus from './virus.svg'
+
+// Import Covid Services
+import { GetCountries, GetCovidInfo, GetCovidTimeline } from './services/CovidService';
+
+// Import components
+import { Header, Info, Timeline } from './components';
+
+const App = () => {
+  const [country, setCountry] = useState('')
+
+  function onCountryChange(country) {
+    setCountry(country)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header icon={virus} title="Covid-19 Tracker" onCountryChange={onCountryChange} fetchCountries={GetCountries} />
+      <Info country={country} fetchInfo={GetCovidInfo} />
+      <Timeline country={country} fetchTimeLine={GetCovidTimeline} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

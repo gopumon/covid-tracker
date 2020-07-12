@@ -1,0 +1,94 @@
+.App {
+  padding: $padding-1;
+}
+
+.Heading {
+  font-size: 1.5rem;
+  .title {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.Icon {
+  height: 1.5rem;
+}
+
+.Info,
+.TimeLine {
+  padding-top: 1rem;
+}
+.Info {
+  .update {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .infoData {
+    padding-top: 1rem;
+    display: grid;
+    gap: 2rem 2rem;
+    grid-template-columns: 1fr;
+    position: relative;
+
+    div {
+      border-radius: 0.8rem;
+      font-size: 2rem;
+      padding: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: $white;
+      &.confirmed {
+        background-color: $confirmed;
+      }
+      &.active {
+        background-color: $active;
+      }
+      &.recovery {
+        background-color: $recovered;
+      }
+      &.death {
+        background-color: $deceased;
+      }
+      span {
+        position: absolute;
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 300;
+        top: 1.3rem;
+      }
+    }
+  }
+}
+.TimeLine {
+  h3 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@include tablet {
+  .Heading {
+    font-size: 3rem;
+    .title {
+      margin-bottom: 0.8rem;
+    }
+  }
+  .Icon {
+    height: 3rem;
+  }
+
+  .Info,
+  .TimeLine {
+    padding-top: 1.5rem;
+  }
+  .Info {
+    .infoData {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@include desktop {
+  .Info {
+    .infoData {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
