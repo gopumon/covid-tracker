@@ -27,7 +27,6 @@
     display: grid;
     gap: 2rem 2rem;
     grid-template-columns: 1fr;
-    position: relative;
 
     div {
       border-radius: 0.8rem;
@@ -36,6 +35,8 @@
       font-weight: 600;
       text-align: center;
       color: $white;
+      position: relative;
+
       &.confirmed {
         background-color: $confirmed;
       }
